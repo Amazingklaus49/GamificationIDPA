@@ -1,0 +1,297 @@
+html {
+    text-align: unset;
+    color: white;
+    background-color: black;
+    width: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: unset;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 1.5rem;
+}
+
+.titel {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 4%;
+    padding-bottom: 1%;
+    border: solid black;
+    border-bottom-color: white;
+    display: flex;
+    position: sticky;
+}
+
+h1 {
+    color: red;
+    text-align: center;
+    font-family: Impact;
+
+}
+
+h2 {
+    text-align: center;
+    font-family: inherit;
+
+}
+
+a {
+    font-style: inherit;
+    text-decoration: none;
+    color: white;
+}
+
+table {
+    display: flex;
+    position: absolute; /* or absolute */
+    top: unset;
+    margin-top: 2.5%;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+.text-field {
+    color: darkorange;
+    position: static;
+    margin-top: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: larger;
+    text-align: center;
+}
+
+.button {
+    appearance: button;
+    backface-visibility: hidden;
+    background-color: #3d3d3d;
+    border-radius: 6px;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Ubuntu, sans-serif;
+    font-size: 120%;
+    height: 60px;
+    line-height: 1.15;
+    margin: 12px 0 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all .2s, box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.button:disabled {
+    cursor: default;
+}
+
+.button:focus {
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+
+.button:hover {
+    background-image: linear-gradient(to right, #fd0e0e, #ffb800);
+    border: solid white 1px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+* {
+    font-family: Roboto;
+}
+
+section {
+    width: 100%;
+    display: inline-block;
+    background-color: black;
+    height: 15vh;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.footer-distributed {
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: normal 16px sans-serif;
+    padding: 45px 50px;
+}
+
+.footer-distributed .footer-left p {
+    color: #8f9296;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Footer links */
+
+.footer-distributed p.footer-links {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0 0 10px;
+    padding: 0;
+    transition: ease .25s;
+}
+
+.footer-distributed p.footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+    transition: ease .25s;
+}
+
+.footer-distributed .footer-links a:before {
+    content: "·";
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+    content: none;
+}
+
+.footer-distributed .footer-right {
+    float: right;
+    margin-top: 6px;
+    max-width: 180px;
+}
+
+.footer-distributed .footer-right a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-left: 3px;
+    transition: all .25s;
+}
+
+.wiki {
+    border-radius: 20px;
+}
+
+.footer-distributed .footer-right a:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+}
+
+.footer-distributed p.footer-links a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .footer-distributed .footer-left, .footer-distributed .footer-right {
+        text-align: center;
+    }
+
+    .footer-distributed .footer-right {
+        float: none;
+        margin: 0 auto 20px;
+    }
+
+    .footer-distributed .footer-left p.footer-links {
+        line-height: 1.8;
+    }
+}
+
+@import "compass/css3";
+.radio {
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    text-align: left;
+}
+
+.radioGroup {
+    margin-left: 35%;
+    margin-right: 35%;
+    padding: 2%;
+    background-color: grey;
+    border-radius: 8px;
+    margin-bottom: 5%;
+    margin-top: 3%;
+}
+
+.radioGroup:hover{
+    background-image: linear-gradient(to right, #fd0e0e, #ffb800);
+    border: solid white 1px;
+}
+
+.innerRadioGroup{
+    text-align: center;
+
+}
+
+.radio + .radio {
+    margin-top: 12px;
+}
+
+.radio input {
+    display: none;
+}
+
+.radio input + span {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+}
+
+.radio input + span:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+.radio input + span:after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #222;
+    position: absolute;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    opacity: 0;
+    transform: scale(0, 0);
+    transition: all 0.2s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+}
+
+.radio input:checked + span:after {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
