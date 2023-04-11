@@ -24,7 +24,7 @@ if ($conn->connect_error) {
 
 <table class="buttonGroup">
     <tr>
-        <th class="button"><a href="abfrage.php"><p>Abfrage</p></a>
+        <th class="button"><a href="abfrage.php?number=1&correct=0"><p>Abfrage</p></a>
         </th>
         <th class="button"><a href="multiple.php"><p>Multiple-Choice</p></a>
         </th>

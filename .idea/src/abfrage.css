@@ -101,8 +101,6 @@ table {
     height: 110%;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
-
 * {
     font-family: Roboto;
 }
@@ -329,3 +327,9 @@ body {
     width: 55%;
     height: 50px;
 }
+
+.forms{
+    width: 80%;
+    text-align: center;
+}
+

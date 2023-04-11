@@ -2,8 +2,13 @@
 <head>
     <title>Gamification</title>
     <link rel="stylesheet" href="abfrage.css">
-</head>
 
+    <script type="text/javascript">
+        function timedMsg() {
+            var t = setTimeout("document.getElementById('myMsg').style.display='none';", 4000);
+        }
+    </script>
+</head>
 
 <body style="background-color: black">
 
@@ -20,11 +25,11 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 $sql = "SELECT id, question, answer FROM QandA";
-$result = $conn->query($sql);
+$question = $conn->query($sql);
 
-if ($result->num_rows > 0) {
+if ($question->num_rows > 0) {
     // output data of each row
-    while ($row = $result->fetch_assoc()) {
+    while ($row = $question->fetch_assoc()) {
         echo "id: " . $row["id"] . " - Question: " . $row["question"] . " - Solutions: " . $row["answer"] . "<br>";
     }
 } else {
@@ -37,21 +42,68 @@ if ($result->num_rows > 0) {
 <div class="break"></div>
 
 <?php
-$conn = new mysqli($servername, $username, $password, $dbname);
-$sql = "SELECT question FROM QandA WHERE id = 1";
-$result = $conn->query($sql);
-echo "<h2>$result</h2>";
+
+/*$sql = "SELECT * FROM QandA";
+$result = mysqli_query($conn, $sql);
+$rowcount = mysqli_num_rows( $result );
+$idArray = array();
+for ($i = 1; $i <= $rowcount; $i++){
+    array_push($idArray, $i);
+}
+$questionId = array_rand($idArray, 1);*/
+
+if (isset($_GET["number"])) {
+    $questionId = (int)$_GET["number"] ?? 0;
+} else {
+    echo "Fehler";
+}
+if (isset($_GET["correct"])) {
+    $correct = (int)$_GET["correct"] ?? 0;
+} else {
+    echo "Fehler";
+}
+
+$sql = "SELECT question FROM QandA WHERE id = '$questionId'";
+$question = $conn->query($sql);
+
+if ($question->num_rows > 0) {
+    while ($row = $question->fetch_assoc()) {
+        echo "Question: " . $row["question"] . "<br>";
+    }
+}
+
 ?>
 
-<div class="form__group field">
-    <input type="input" class="form__field" placeholder="Antwort" name="name" id='name' required/>
-    <label for="name" class="form__label">Antwort</label>
-</div>
+<form class="forms" method="post">
+    <div class="form__group field">
+        <input type="input" class="form__field" placeholder="Antwort" name="userInput" id="name" required/>
+        <label for="name" class="form__label">Antwort</label></div>
+    <br>
+    <button class="button" type="submit" name="submit">Abfrage</button>
+    <br>
+</form>
 
-<br>
-<button class="button">Abfrage</button>
+<?php
+$sql = "SELECT answer FROM QandA WHERE id ='$questionId'";
+$query = mysqli_query($conn, $sql);
+$solution = mysqli_fetch_assoc($query);
+$solutionString = $solution['answer'];
 
-<br>
+if (isset ($_POST['submit'])) {
+    $userInput = $_POST['userInput'];
+    if ($userInput == $solutionString) {
+        echo '<p id="myMsg">Korrekte Antwort</p><script language="JavaScript" type="text/javascript">timedMsg()</script>';
+        $correct++;
+        echo "njeri";
+    } else {
+        echo '<p id="myMsg">Falsch Antwort</p><script language="JavaScript" type="text/javascript">timedMsg()</script>';
+    }
+    $questionId++;
+}
+header("Location:http://localhost:63342/GamificationIDPA/idpa_gamification/.idea/src/abfrage.php?number=$questionId&correct=$correct");
+
+?>
+
 
 <section></section>
 <footer class="footer-distributed">
