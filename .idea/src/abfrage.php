@@ -94,13 +94,12 @@ if (isset ($_POST['submit'])) {
     if ($userInput == $solutionString) {
         echo '<p id="myMsg">Korrekte Antwort</p><script language="JavaScript" type="text/javascript">timedMsg()</script>';
         $correct++;
-        echo "njeri";
     } else {
         echo '<p id="myMsg">Falsch Antwort</p><script language="JavaScript" type="text/javascript">timedMsg()</script>';
     }
     $questionId++;
+    header("Location:http://localhost:63342/GamificationIDPA/idpa_gamification/.idea/src/abfrage.php?number=$questionId&correct=$correct");
 }
-header("Location:http://localhost:63342/GamificationIDPA/idpa_gamification/.idea/src/abfrage.php?number=$questionId&correct=$correct");
 
 ?>
 
