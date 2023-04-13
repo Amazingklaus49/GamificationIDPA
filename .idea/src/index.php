@@ -72,7 +72,7 @@ if ($conn->connect_error) {
         <p class="footer-links">
             <a class="link-1" href="index.php">Home</a>
 
-            <a href="abfrage.php">Abfrage</a>
+            <a href="abfrage.php?number=1&correct=0">Abfrage</a>
 
             <a href="multiple.php">Multiple-Choice</a>
 

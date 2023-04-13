@@ -5,7 +5,7 @@
 
     <script type="text/javascript">
         function timedMsg() {
-            var t = setTimeout("document.getElementById('myMsg').style.display='none';", 4000);
+            var t = setTimeout("document.getElementById('myMsg').style.display='none';", 2000);
         }
     </script>
 </head>
@@ -27,6 +27,12 @@ if ($conn->connect_error) {
 $sql = "SELECT id, question, answer FROM QandA";
 $question = $conn->query($sql);
 
+$sql = "SELECT COUNT(id) FROM QandA";
+$query = mysqli_query($conn, $sql);
+$solution = mysqli_fetch_assoc($query);
+$maxQuestions = $solution['COUNT(id)'];
+
+/*
 if ($question->num_rows > 0) {
     // output data of each row
     while ($row = $question->fetch_assoc()) {
@@ -34,7 +40,8 @@ if ($question->num_rows > 0) {
     }
 } else {
     echo "0 results";
-}
+}*/
+
 ?>
 
 <img class="titel" src="images/titel/titelabfrage.png">
@@ -42,7 +49,6 @@ if ($question->num_rows > 0) {
 <div class="break"></div>
 
 <?php
-
 /*$sql = "SELECT * FROM QandA";
 $result = mysqli_query($conn, $sql);
 $rowcount = mysqli_num_rows( $result );
@@ -63,6 +69,10 @@ if (isset($_GET["correct"])) {
     echo "Fehler";
 }
 
+if($questionId == $maxQuestions+1) {
+    header("Location:http://localhost:63342/GamificationIDPA/idpa_gamification/.idea/src/abfrageDone.php?correct=$correct");
+}
+
 $sql = "SELECT question FROM QandA WHERE id = '$questionId'";
 $question = $conn->query($sql);
 
@@ -81,6 +91,7 @@ if ($question->num_rows > 0) {
     <br>
     <button class="button" type="submit" name="submit">Abfrage</button>
     <br>
+    <p>Korrekte Antworten: <?php echo $correct;?> / <?php echo $maxQuestions;?></p>
 </form>
 
 <?php
@@ -89,19 +100,25 @@ $query = mysqli_query($conn, $sql);
 $solution = mysqli_fetch_assoc($query);
 $solutionString = $solution['answer'];
 
+
 if (isset ($_POST['submit'])) {
+
     $userInput = $_POST['userInput'];
+    echo $userInput;
     if ($userInput == $solutionString) {
-        echo '<p id="myMsg">Korrekte Antwort</p><script language="JavaScript" type="text/javascript">timedMsg()</script>';
+        echo "njeri";
         $correct++;
+        $questionId++;
     } else {
-        echo '<p id="myMsg">Falsch Antwort</p><script language="JavaScript" type="text/javascript">timedMsg()</script>';
+        echo "falsch";
+        $questionId++;
     }
-    $questionId++;
     header("Location:http://localhost:63342/GamificationIDPA/idpa_gamification/.idea/src/abfrage.php?number=$questionId&correct=$correct");
 }
 
 ?>
+
+
 
 
 <section></section>
