@@ -20,7 +20,7 @@ if ($conn->connect_error) {
 }
 ?>
 
-<h2>Wählen Sie </h2>
+<h2>Wählen Sie ein gewünschtes Programm aus </h2>
 
 <table class="buttonGroup">
     <tr>
@@ -28,7 +28,7 @@ if ($conn->connect_error) {
         </th>
         <th class="button"><a href="multiple.php"><p>Multiple-Choice</p></a>
         </th>
-        <th class="button"><a href="zuordnen.php"><p>Zuordnen</p></a>
+        <th class="button"><a href="zuordnen.php"><p>Highscores</p></a>
         </th>
     </tr>
 </table>

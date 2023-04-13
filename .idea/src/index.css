@@ -88,7 +88,8 @@ table {
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    width: 100%;
+    width: 140%;
+    margin-left: -20%;
 }
 
 .button:disabled {
