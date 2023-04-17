@@ -74,7 +74,7 @@ if ($conn->connect_error) {
 
             <a href="abfrage.php?number=1&correct=0">Abfrage</a>
 
-            <a href="multiple.php">Multiple-Choice</a>
+            <a href="multiple.php?number=1&correct=0"">Multiple-Choice</a>
 
             <a href="zuordnen.php">Zuordnen</a>
 

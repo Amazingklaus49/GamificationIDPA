@@ -17,7 +17,7 @@
         <input type="input" class="form__field" placeholder="Username" name="userInput" id="name" required/>
         <label for="name" class="form__label">Username</label></div>
     <br>
-    <button class="button" type="submit" name="submit">Abfrage</button>
+    <button class="button" type="submit" name="submit">Eintragen</button>
     <br>
 </form>
 
@@ -99,7 +99,7 @@ if ($highscores->num_rows > 0) {
 
             <a href="abfrage.php?number=1&correct=0">Abfrage</a>
 
-            <a href="multiple.php">Multiple-Choice</a>
+            <a href="multiple.php?number=1&correct=0"">Multiple-Choice</a>
 
             <a href="zuordnen.php">Zuordnen</a>
 

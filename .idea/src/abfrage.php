@@ -106,11 +106,9 @@ if (isset ($_POST['submit'])) {
     $userInput = $_POST['userInput'];
     echo $userInput;
     if ($userInput == $solutionString) {
-        echo "njeri";
         $correct++;
         $questionId++;
     } else {
-        echo "falsch";
         $questionId++;
     }
     header("Location:http://localhost:63342/GamificationIDPA/idpa_gamification/.idea/src/abfrage.php?number=$questionId&correct=$correct");
@@ -141,9 +139,9 @@ if (isset ($_POST['submit'])) {
         <p class="footer-links">
             <a class="link-1" href="index.php">Home</a>
 
-            <a href="abfrage.php">Abfrage</a>
+            <a href="abfrage.php?number=1&correct=0"">Abfrage</a>
 
-            <a href="multiple.php">Multiple-Choice</a>
+            <a href="multiple.php?number=1&correct=0"">Multiple-Choice</a>
 
             <a href="zuordnen.php">Zuordnen</a>
 

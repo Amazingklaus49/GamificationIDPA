@@ -45,7 +45,7 @@ a {
 
 table {
     display: flex;
-    position: absolute; /* or absolute */
+    position: absolute;
     top: unset;
     margin-top: 2.5%;
     margin-left: 40%;
