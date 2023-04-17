@@ -26,14 +26,14 @@ if ($conn->connect_error) {
     <tr>
         <th class="button"><a href="abfrage.php?number=1&correct=0"><p>Abfrage</p></a>
         </th>
-        <th class="button"><a href="multiple.php"><p>Multiple-Choice</p></a>
+        <th class="button"><a href="multiple.php?number=1&correct=0""><p>Multiple-Choice</p></a>
         </th>
-        <th class="button"><a href="zuordnen.php"><p>Highscores</p></a>
+        <th class="button"><a href="highscores.php"><p>Highscores</p></a>
         </th>
     </tr>
 </table>
 
-<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
 
 <div class="text-field">
     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
