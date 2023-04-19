@@ -18,9 +18,7 @@ $username = "root";
 $password = "1234";
 $dbname = "qanda_db";
 
-// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
@@ -31,17 +29,6 @@ $sql = "SELECT COUNT(id) FROM QandA";
 $query = mysqli_query($conn, $sql);
 $solution = mysqli_fetch_assoc($query);
 $maxQuestions = $solution['COUNT(id)'];
-
-/*
-if ($question->num_rows > 0) {
-    // output data of each row
-    while ($row = $question->fetch_assoc()) {
-        echo "id: " . $row["id"] . " - Question: " . $row["question"] . " - Solutions: " . $row["answer"] . "<br>";
-    }
-} else {
-    echo "0 results";
-}*/
-
 ?>
 
 <img class="titel" src="images/titel/titelabfrage.png">
@@ -143,7 +130,7 @@ if (isset ($_POST['submit'])) {
 
             <a href="multiple.php?number=1&correct=0"">Multiple-Choice</a>
 
-            <a href="zuordnen.php">Zuordnen</a>
+            <a href="highscores.php">HighScores</a>
 
             <a href="mailto:sutter.marc@hispeed.ch">Contact</a>
         </p>

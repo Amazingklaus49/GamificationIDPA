@@ -28,9 +28,7 @@ $username = "root";
 $password = "1234";
 $dbname = "qanda_db";
 
-// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
@@ -67,12 +65,11 @@ $sql = "SELECT id, username, score FROM HighScore ORDER BY score DESC";
 $highscores = $conn->query($sql);
 
 if ($highscores->num_rows > 0) {
-    // output data of each row
     while ($row = $highscores->fetch_assoc()) {
         echo " - Username: " . $row["username"] . " | Score: " . $row["score"] . " / $maxQuestions" . "<br>";
     }
 } else {
-    echo "0 results";
+    echo "nothing found";
 }
 
 ?>
@@ -101,7 +98,7 @@ if ($highscores->num_rows > 0) {
 
             <a href="multiple.php?number=1&correct=0"">Multiple-Choice</a>
 
-            <a href="zuordnen.php">Zuordnen</a>
+            <a href="highscores.php">HighScores</a>
 
             <a href="mailto:sutter.marc@hispeed.ch">Contact</a>
         </p>

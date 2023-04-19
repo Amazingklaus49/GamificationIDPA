@@ -11,23 +11,11 @@ $username = "root";
 $password = "1234";
 $dbname = "multiple_db";
 
-// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$sql = "SELECT id, question, solution FROM qa";
-$question = $conn->query($sql);
 
-if ($question->num_rows > 0) {
-    // output data of each row
-    while ($row = $question->fetch_assoc()) {
-        echo "id: " . $row["id"] . " - Question: " . $row["question"] . " - Solutions: " . $row["solution"] . "<br>";
-    }
-} else {
-    echo "0 results";
-}
 
 $sql = "SELECT COUNT(id) FROM qa";
 $query = mysqli_query($conn, $sql);
@@ -144,7 +132,7 @@ if (isset ($_POST['submit'])) {
 
             <a href="multiple.php?number=1&correct=0"">Multiple-Choice</a>
 
-            <a href="zuordnen.php">Zuordnen</a>
+            <a href="highscores.php">HighScores</a>
 
             <a href="mailto:sutter.marc@hispeed.ch">Contact</a>
         </p>

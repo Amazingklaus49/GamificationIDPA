@@ -11,10 +11,7 @@ $servername = "localhost";
 $username = "root";
 $password = "1234";
 
-// Create connection
 $conn = new mysqli($servername, $username, $password);
-
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
@@ -76,7 +73,7 @@ if ($conn->connect_error) {
 
             <a href="multiple.php?number=1&correct=0"">Multiple-Choice</a>
 
-            <a href="zuordnen.php">Zuordnen</a>
+            <a href="highscores.php">HighScores</a>
 
             <a href="mailto:sutter.marc@hispeed.ch">Contact</a>
         </p>
