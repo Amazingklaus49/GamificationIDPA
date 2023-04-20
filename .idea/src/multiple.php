@@ -46,7 +46,7 @@ $question = $conn->query($sql);
 
 if ($question->num_rows > 0) {
     while ($row = $question->fetch_assoc()) {
-        echo "<h2> Question: " . $row["question"] . "</h2>";
+        echo "<h2> Frage: " . $row["question"] . "</h2>";
     }
 }
 

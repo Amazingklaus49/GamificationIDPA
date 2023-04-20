@@ -65,7 +65,7 @@ $question = $conn->query($sql);
 
 if ($question->num_rows > 0) {
     while ($row = $question->fetch_assoc()) {
-        echo "Question: " . $row["question"] . "<br>";
+        echo "Frage: " . $row["question"] . "<br>";
     }
 }
 
