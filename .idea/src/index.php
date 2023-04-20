@@ -33,23 +33,24 @@ if ($conn->connect_error) {
 <br><br><br><br><br><br><br><br>
 
 <div class="text-field">
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-        takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-        diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-        dolor sit amet.
+    <p>Dies ist das Produkt aus der IDPA, von Samuel Wachter und Marc Sutter. Es ist eine Web-app in Form einer
+        Gamification. Der Begriff «Gamification» stammt aus dem englischem und bedeutet so viel wie, Spielifikation oder
+        Spielifizierung und ist der Begriff für die spielerische Umsetzung einer Anwendung. Es werden spieltypische
+        Elemente und Techniken in nicht spieltypische Umfelder eingesetzt, um das Engagement und die Motivation der
+        Nutzer zu beeinflussen.
+    </p>
+<br>
+    <p>
+        Diese Website ist als ein Lern-Tool gedacht, dieses Tool ist in der Form einer Gamification gestaltet und
+        erfüllt den Zweck, auf eine spielerische Art und Weise, den Nutzer beim Lernen zu unterstützen. Es gibt zwei
+        Quiz Formate: eine Abfrage und eine Multiple Choice Funktion. Bei der Abfrage werden zuerst ein paar Wörter in
+        der schwarzen Sprache abgefragt und danach werden noch ein paar simple Trivia Fragen gestellt. Die Multiple
+        Choice fragen sind alle auf den Inhalt bezogen. Dazu gibt es nach jedem Durchlauf die Möglichkeit, sich mit
+        Namen, auf einer Highscore-Liste einzutragen. Die Fragen basieren alle auf dem 1. Bande, der «Der Herr der
+        Ringe» Trilogie, «Die Gefährten».
+    </p>
 
-        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
-        feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
-        delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
 
-        Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
-        commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse</p>
 </div>
 
 <section></section>
@@ -57,10 +58,13 @@ if ($conn->connect_error) {
 
     <div class="footer-right">
 
-        <a href="https://github.com/Amazingklaus49"><i class="fa fa-github"></i><img style="width: 35px; height: 35px" src="images/github.png"></a>
-        <a href="https://www.kbw.ch/startseite"><i class="fa fa-kbw"></i><img style="width: 35px; height: 35px" src="images/kbw.png"></a>
+        <a href="https://github.com/Amazingklaus49"><i class="fa fa-github"></i><img style="width: 35px; height: 35px"
+                                                                                     src="images/github.png"></a>
+        <a href="https://www.kbw.ch/startseite"><i class="fa fa-kbw"></i><img style="width: 35px; height: 35px"
+                                                                              src="images/kbw.png"></a>
         <a href="#"><i class="fa fa-linkedin"></i><img style="width: 35px; height: 35px" src="images/twitter.png"></a>
-        <a class="wiki" href="https://lotr.fandom.com/de/wiki/Der_Herr_der_Ringe_Wiki"><i class="fa fa-wiki"></i><img style="width: 35px; height: 35px" src="images/wiki.png"></a>
+        <a class="wiki" href="https://lotr.fandom.com/de/wiki/Der_Herr_der_Ringe_Wiki"><i class="fa fa-wiki"></i><img
+                    style="width: 35px; height: 35px" src="images/wiki.png"></a>
 
     </div>
 
